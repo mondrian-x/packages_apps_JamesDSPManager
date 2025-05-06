@@ -18,9 +18,6 @@ BUILD_PATH := packages/apps/JamesDSPManager
 PRODUCT_SOONG_NAMESPACES += \
    $(BUILD_PATH)
 
-# SEPolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(BUILD_PATH)/sepolicy/vendor
-
 PRODUCT_PACKAGES += \
     JamesDSPManager \
     libjamesdsp \
