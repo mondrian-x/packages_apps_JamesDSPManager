@@ -3,14 +3,17 @@ soong_namespace {
 
 android_app_import {
     name: "JamesDSPManager",
-    apk: "system/app/JamesDSPManager/JamesDSPManagerThePBone.apk",
+    apk: "system-ext/app/JamesDSPManager/JamesDSPManagerThePBone.apk",
     presigned: true,
     preprocessed: true,
-    dex_preopt: { enabled: false },
+    dex_preopt: {
+         enabled: false,
+    },
     overrides: ["AudioFX"],
+    system_ext_specific: true,
     optional_uses_libs: [
-    "androidx.window.extensions",
-    "androidx.window.sidecar",
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
     ],
 }
 
